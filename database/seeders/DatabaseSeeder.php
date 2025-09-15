@@ -18,5 +18,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        // $this->call(ManagerSeeder::class); // If I implement manager seeder as a separate file/class
+        // $this->call(CustomerSeeder::class); // If I implement customer seeder as a separate file/class
+        // $this->call(OrderSeeder::class); // If I implement order seeder as a separate file/class
     }
 }
