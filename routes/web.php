@@ -24,3 +24,8 @@ Route::get('/testroute', function () {
 Route::get('/testroute2', function () {
     return "Test route added from PHPStorm";
 });
+
+Route::get('/testdb', function () {
+    return "Test route to check if DB connection is working. Connection: ".DB::connection()->getPdo()->getAttribute(PDO::ATTR_CONNECTION_STATUS);
+});
+
