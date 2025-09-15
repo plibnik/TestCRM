@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/testroute', function () {
     return "Test route";
 });
+
+Route::get('/testroute2', function () {
+    return "Test route added from PHPStorm";
+});
