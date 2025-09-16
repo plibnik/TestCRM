@@ -10,7 +10,7 @@ class Company extends Model
 {
     use HasFactory;
     protected $table = 'companies'; //not necessary here, but what if?
-
+    protected $fillable = ['name','address'];
     public function customers():HasMany
     {
         return $this->hasmany(Customer::class);
