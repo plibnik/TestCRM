@@ -35,3 +35,5 @@ Route::get('/test_get_all_customers', function () {     // FIXME remove in final
     dd($customers_dump);
 });
 
+Route::resource('company', \App\Http\Controllers\CompanyController::class); // this is copy-paste but I WILL dig it
+

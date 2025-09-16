@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('creation_date'); // there is a timestamp, but in case this was a trick question,
                                                   // let's have date-only (w/o time) field too?
             $table->decimal('amount', 11, 2); // hope that's enough, up to 1 billion (UAH)
-            $table->enum('status', ['new', 'working','completed','cancelled']);
+            $table->enum('status', ['new', 'working','completed','cancelled'])->default('new');
             $table->text('comment'); // can be absent, other fields can't
             $table->timestamps();
         });
