@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('full_name');    //ПІБ клієнта з Т.З., 256 вистачить
             $table->string('phone_number'); //потім зробити з валідацією, 256 вистачить
             $table->string('email_address');//теж валідацію потім
-            // $table->foreignId('company_id')->constrained('company'); // РОЗКОМЕНТУВАТИ, коли створю табл. компаній FIXME
+            $table->foreignId('company_id')->constrained('companies'); // DONE
             $table->text('comment');        //тут довший, мало що там можуть тримати
             $table->timestamps();
         });
