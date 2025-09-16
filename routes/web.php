@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CompanyController;
 
@@ -15,9 +16,13 @@ Route::resource('companies', \App\Http\Controllers\CompanyController::class); //
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index'])->name('home');
+// I have saved this syntax for review, the path is "/" but Laravel will invoke
+// HomeController->index with *home*.blade.php
+
+//Route::get('/', function () {
+//    return view('home');
+//});
 
 Route::get('/testroute', function () {
     return "Test route";
