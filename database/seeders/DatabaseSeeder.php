@@ -13,10 +13,14 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-                CustomerSeeder::class
+                CustomerSeeder::class,
+                ManagerSeeder::class,
+                OrderSeeder::class // Order seeding must be called AFTER managers and customers as it refers to them!
                 # ADD MORE SEEDERS HERE
                 # SEPARATE SEEDERS CAN BE CALLED MANUALLY , like : php artisan db:seed CustomerSeeder
         ]);
+
+
 
         // \App\Models\User::factory(10)->create();
 

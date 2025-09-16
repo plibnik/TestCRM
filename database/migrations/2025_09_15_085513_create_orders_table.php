@@ -19,7 +19,7 @@ return new class extends Migration
                                                   // let's have date-only (w/o time) field too?
             $table->decimal('amount', 11, 2); // hope that's enough, up to 1 billion (UAH)
                 $table->enum('status', ['new', 'working','completed','cancelled']);
-            $table->text('comment');
+            $table->text('comment'); // can be absent, other fields can't
             $table->timestamps();
         });
     }
