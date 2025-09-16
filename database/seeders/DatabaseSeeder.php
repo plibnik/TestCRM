@@ -12,6 +12,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call([
+                CustomerSeeder::class
+                # ADD MORE SEEDERS HERE
+                # SEPARATE SEEDERS CAN BE CALLED MANUALLY , like : php artisan db:seed CustomerSeeder
+        ]);
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
