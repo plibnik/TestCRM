@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Manager extends Model
 {
     use HasFactory;
+
+    public static function GetOne() { return 1;}
+
     protected $table = 'managers'; //not necessary here, but what if?
 
     public function orders(): HasMany

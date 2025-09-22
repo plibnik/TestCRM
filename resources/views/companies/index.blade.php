@@ -1,4 +1,6 @@
 @extends('layouts.app')
+<?php use App\Models\Manager
+?>
 
 @section('content')
     <div class="container">
@@ -32,7 +34,9 @@
                     </tr>
                 @endforeach
                 <tr><td> </td></tr>
-                <tr><td>Total number of companies: {{$companies->count() }}</td></tr>
+                <tr><td>Total number of companies: {{$companies->count() }}</td> <td> @@ echo "The sum is" @@ </td></tr>
+
+
                 </tbody>
             </table>
         @else
