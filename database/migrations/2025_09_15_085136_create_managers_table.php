@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('login');        //username for auth
             $table->string('full_name');    //Name to be used in greetings or "You have logged as: $full_name"
+            $table->foreignId('user_id')->constrained('users'); // EACH manager has a corresponding user!
 
             //TEMPORARY, FIXME
             $table->string('password');     //BAD and again bad for opentext, but I will replace it with Breeze
