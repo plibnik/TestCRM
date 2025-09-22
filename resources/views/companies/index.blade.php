@@ -20,7 +20,7 @@
                 <tbody>
                 @foreach ($companies as $company)
                     <tr>
-                        <td>{{ $company->name }}</td>
+                        <td><a href="{{route('companies.show', $company->id)}}">{{ $company->name }}</a></td>
                         <td>{{ $company->address }}</td>
 <!--                        <td>{{ $company->status }}</td>     -->
                         <td>
@@ -35,7 +35,7 @@
                 @endforeach
                 <tr><td> </td></tr>
                 <tr><td>Total number of companies: {{$companies->count() }}</td> <td>@php echo "Total amount of orders for all companies: ".\App\Models\Order::sum('amount')@endphp </td></tr>
-                {{-- FIXME above bad practice! counting sum in a blade instead of passing it in a slot}}
+                {{-- FIXME above bad practice! counting sum in a blade instead of passing it in a slot--}}
 
                 </tbody>
             </table>
