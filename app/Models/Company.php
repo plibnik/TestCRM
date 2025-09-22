@@ -15,4 +15,10 @@ class Company extends Model
     {
         return $this->hasmany(Customer::class);
     }
+
+    public static function return_only_ids_and_names()
+    {
+        $list_of_ids_and_names= self::all(['id','name']);
+        return $list_of_ids_and_names;
+    }
 }
