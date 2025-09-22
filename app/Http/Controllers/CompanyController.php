@@ -22,6 +22,12 @@ class CompanyController extends Controller
         return view('companies.create');
     }
 
+    public function show (Company $company)
+    {
+        return view ('companies.show', compact('company'));
+    }
+
+
     public function store(Request $request)
     {
 
@@ -37,17 +43,17 @@ class CompanyController extends Controller
 
     public function edit(Company $company)
     {
-        return view('companies.edit', compact('company'));
+        return view('companies.edit', compact('company')); // so we pass current company data to the blade
     }
 
     public function update(Request $request, Company $company)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|string|max:255',
         ]);
 
-        $company->update($request->all());
+        $company->update($validatedData);
         return redirect()->route('companies.index')->with('success', 'Company updated successfully.');
     }
 

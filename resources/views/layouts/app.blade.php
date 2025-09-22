@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Management App — Test task (in progress)</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <!-- лінк вище -- просто знайшов зі зразку, я розумію, що в ідеалі треба було б додати його в депенденсіз, але час! -->
+    <!-- лінк вище -- просто знайшов зі зразка, я розумію, що в ідеалі треба було б додати його в депенденсіз, але час! -->
 </head>
 <body>
 <table>

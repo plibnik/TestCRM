@@ -25,5 +25,5 @@ class Manager extends Model
     {
         return $this->hasOne(User::class);
     }
-    
+
 }

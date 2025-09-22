@@ -20,6 +20,9 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // I have saved this syntax for review, the path is "/" but Laravel will invoke
 // HomeController->index with *home*.blade.php
 
+// added, it should be automatic tho as "companies.create" worked w/o it?
+Route::resource('companies', CompanyController::class);
+
 //Route::get('/', function () {
 //    return view('home');
 //});
