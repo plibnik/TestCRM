@@ -22,7 +22,7 @@ class CustomerFactory extends Factory
      *
      * @var string
      */
-#    protected $model = User::class;
+#    protected $model = UserSeeder::class;
 
     /**
      * Define the model's default state.

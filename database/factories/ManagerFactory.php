@@ -17,6 +17,9 @@ class ManagerFactory extends Factory
      */
     public function definition(): array
     {
+
+
+
         return [
             'full_name'=>fake()->name,      // should be unique, but for now...
             'login'=>Str::random(5), // should be unique, but for now...

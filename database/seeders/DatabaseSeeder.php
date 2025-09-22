@@ -17,17 +17,20 @@ class DatabaseSeeder extends Seeder
                 CustomerSeeder::class, // depend on companies
 
                 ManagerSeeder::class,  // may be called first too
-                OrderSeeder::class // Order seeding must be called AFTER *managers* and *customers* as it refers to them!
+
+                OrderSeeder::class,// Order seeding must be called AFTER *managers* and *customers* as it refers to them!
+
+                UserSeeder::class // here the admin:admin user will be created, and maybe also anonymous read-only user
                 # ADD MORE SEEDERS HERE
                 # SEPARATE SEEDERS CAN BE CALLED MANUALLY , like : php artisan db:seed CustomerSeeder
         ]);
 
 
 
-        // \App\Models\User::factory(10)->create();
+        // \App\Models\UserSeeder::factory(10)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
+        // \App\Models\UserSeeder::factory()->create([
+        //     'name' => 'Test UserSeeder',
         //     'email' => 'test@example.com',
         // ]);
 
